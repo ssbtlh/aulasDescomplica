@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#an simple calculator made in shell, code by Isaias.
+
 # we will take two simple user inputs.
 
 echo "Input two integrer numbers:"
