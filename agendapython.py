@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import mysql.connector
 
 # Declaração de funções para manipulação por menu
