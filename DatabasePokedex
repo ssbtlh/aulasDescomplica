@@ -1,0 +1,324 @@
+-- A simple database wich the 151 pokemons of Gen 1
+
+-- Creating database and tables
+	CREATE DATABASE pokedex;
+	use pokedex;
+
+
+
+CREATE TABLE `pokemon` (
+	  `pokemon_number` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	  `pokemon_name` varchar(30) NOT NULL,
+	  `classfication` varchar(30) NOT NULL,
+	  `height_m` float DEFAULT NULL,
+	  `type1` varchar(10) NOT NULL,
+	  `type2` varchar(10) DEFAULT NULL,
+	  `is_legendary` tinyint NOT NULL
+	  );
+
+
+
+-- data input
+
+	insert into pokemon values
+	(1,'Bulbasaur','Seed pokemon','0.7','grass','poison',0);
+	insert into pokemon values
+	(2,'Ivysaur','Seed pokemon','1.0','grass','poison',0);
+	insert into pokemon values
+	(3,'Venusaur','Seed pokemon','0.7','grass','poison',0);
+	insert into pokemon values
+	(4,'Charmander','Lizard pokemon','0.6','fire',NULL,0);
+	insert into pokemon values
+	(5,'Charmeleon','Flame pokemon','1.1','fire',NULL,0);
+	insert into pokemon values
+	(6,'Charizard','Flame pokemon','1.1','fire','flying',0);
+	insert into pokemon values
+	(7,'Squirtle','Tiny Turtle pokemon','1.0','water',NULL,0);
+	insert into pokemon values
+	(8,'Wartotle','Turtle pokemon','1.6','bug',NULL,0);
+	insert into pokemon values
+	(9,'Blastoise','Shellfish pokemon','1.6','bug',NULL,0);
+	insert into pokemon values
+	(10,'Caterpie','Worm pokemon','0.3','bug',NULL,0);
+	insert into pokemon values
+	(11,'Metapod','Cocoon pokemon','0.7','bug',NULL,0);
+	insert into pokemon values
+	(12,'Butterfree','Butterfly pokemon','1.1','bug','flying',0);
+	insert into pokemon values
+	(13,'Weedle','Hairy pokemon','0.3','bug',NULL,0);
+	insert into pokemon values
+	(14,'Kakuna','Cocoon pokemon','0.6','bug',NULL,0);
+	insert into pokemon values
+	(15,'Beedril','Poison Bee pokemon','0.3','bug','poison',0);
+	insert into pokemon values
+	(16,'Pidgey','Tiny Bird Pokemon','0.3','normal','flying',0);
+	insert into pokemon values
+	(17,'Pidgeotto','Bird Pokemon','1.1','normal','flying',0);
+	insert into pokemon values
+	(18,'Pidgeot','Bird Pokemon','1.5','normal','flying',0);
+	insert into pokemon values
+	(19,'Ratata','Mouse Pokemon','0.5','normal',NULL,0);
+	insert into pokemon values
+	(20,'Raticate','Mouse Pokemon','1.5','normal',NULL,0);
+	insert into pokemon values
+	(21,'Spearow','Tyny Bird Pokemon','0.3','normal','flying',0);
+	insert into pokemon values
+	(22,'Fearow','Beak Pokemon','0.3','normal','flying',0);
+	insert into pokemon values
+	(23,'Ekans','Snake pokemon','2.3','poison',NULL,0);
+	insert into pokemon values
+	(24,'Arbok','Snake pokemon','3.5','poison',NULL,0);
+	insert into pokemon values
+	(25,'Pikachu','Mouse Pokemon','0.4','eletric',NULL,0);
+	insert into pokemon values
+	(26,'Raichu','Mouse Pokemon','0.7','eletric',NULL,0);
+	insert into pokemon values
+	(27,'Sandshrew','Mouse Pokemon','3.4','ground',NULL,0);
+	insert into pokemon values
+	(28,'Sandslash','Mouse Pokemon','7.4','ground',NULL,0);
+	insert into pokemon values
+	(29,'Nidoran F','Poison Pin Pokémon','0.4','poison',NULL,0);
+	insert into pokemon values
+	(30,'Nidorina','Poison Pin Pokémon','0.8','poison',NULL,0);
+	insert into pokemon values
+	(31,'Nidoqueen', 'Drill Pokemon', '1.3','poison','ground',0);
+	insert into pokemon values
+	(32,'Nidoran M','Poison Pin Pokémon','0.4','poison',NULL,0);
+	insert into pokemon values
+	(33,'Nidorino','Poison Pin Pokémon','0.8','poison',NULL,0);
+	insert into pokemon values
+	(34,'Nidoking','Drill Pokemon','0.4','poison','ground',0);
+	insert into pokemon values
+	(35,'Clefairy','Fairy Pokémon','0.6','normal',NULL,0);
+	insert into pokemon values
+	(36, 'Clefalble', 'Fairy Pokémon', '1.3', 'normal', NULL,0);
+	insert into pokemon values
+	(37, 'Vulpix', 'Fox Pokemon', '0.6', 'fire', NULL,0);
+	insert into pokemon values
+	(38, 'Ninetales', 'Fox Pokemon', '2.5', 'fire', NULL, 0);
+	insert into pokemon values
+	(39,'Jigglypuff', 'Baloon Pokemon', '0.5', 'normal', NULL, 0);
+	insert into pokemon values
+	(40,'Wigglytuff', 'Baloon Pokemon', '1.0', 'normal', NULL, 0);
+	insert into pokemon values
+	(41, 'Zubat', 'Bat Pokemon', '0.8','poison', 'flying', 0);
+	insert into pokemon values
+	(42, 'Golbat', 'Bat Pokemon', '1.3', 'poison','flying', 0);
+	insert into pokemon values
+	(43, 'Oddish', 'Weed Pokemon', '0.5', 'grass', 'poison',0);
+	insert into pokemon values
+	(44, 'Gloom', 'Weed Pokemon', '0.8', 'grass', 'poison', 0);
+	insert into pokemon values
+	(45, 'Vileplume', 'Flower Pokemon', '0.8','grass', 'poison', 0);
+	insert into pokemon values
+	(46, 'Paras','Murshoroom Pokemon','0.3','bug','grass', 0);
+	insert into pokemon values
+	(47, 'Parasect', 'Murshoorm Pokemon', 1.0, 'bug', 'grass', 0);
+	insert into pokemon values
+	(48, 'Venonat', 'Insect Pokemon', '1.0', 'bug', 'poison',0);
+	insert into pokemon values
+	(49, 'Venomoth', 'Poison Moth Pokemon', '1.5', 'bug', 'poison', 0);
+	insert into pokemon values
+	(50, 'Digglet', 'Mole Pokemon', '0.3', 'ground', NULL, 0);
+	insert into pokemon values
+	(51, 'Dugtrio', 'Mole Pokemon', '0.5', 'ground', NULL, 0);
+	insert into pokemon values
+	(52, 'Meowth', 'Strach Cat Pokemon', '0.5', 'normal', NULL,0);
+	insert into pokemon values
+	(53, 'Persian', 'Classy Cat Pokemon', '1.0', 'normal', NULL, 0);
+	insert into pokemon values
+	(54, 'Psyduck', 'Duck Pokemon', '0.8', 'water', NULL,0);
+	insert into pokemon values
+	(55, 'Golduck', 'Duck Pokemon', '1.7', 'water', NULL,0);
+	insert into pokemon values
+	(56, 'Mankey', 'Pig Monkey Pokemon', '0.5', 'fighting', NULL,0);
+	insert into pokemon values
+	(57, 'Primeape', 'Pig Monkey Pokemon', '1.5', 'fighting', NULL,0);
+	insert into pokemon values
+	(58, 'Growlithe', 'Puppy Pokemon', '0.7', 'fire', NULL,0);
+	insert into pokemon values
+	(59, 'Arcanine', 'Legendary Pokemon', '0.7', 'fire', NULL,0);
+	insert into pokemon values
+	(60, 'Poliwag', 'Tadpole Pokemon', '0.6', 'water', NULL,0);
+	insert into pokemon values
+	(61, 'Poliwhirl', 'Puppy Pokemon', '0.7', 'water', NULL,0);
+	insert into pokemon values
+	(62, 'Poliwrath', 'Puppy Pokemon', '0.7', 'water', 'fighting',0);
+	insert into pokemon values
+	(63, 'Abra', 'Psi Pokemon', '0.8', 'psychic', NULL,0);
+	insert into pokemon values
+	(64,'Kadabra', 'Psi Pokemon', '1.5', 'psychic', NULL,0);
+	insert into pokemon values
+	(65, 'Alakazam', 'Psi Pokemon', '1.3', 'psychic', NULL,0);
+	insert into pokemon values
+	(66, 'Machop', 'Superpower Pokemon', '0.8', 'figthing', NULL,0);
+	insert into pokemon values
+	(67, 'Machoke', 'Superpower Pokemon', '1.5', 'figthing', NULL, 0);
+	insert into pokemon values
+	(68,'Machamp', 'Superpower Pokemon', '1.7', 'figthing', NULL,0);
+	insert into pokemon values
+	(69, 'Belsprout', 'Flower Pokemon', '0.7', 'grass', 'poison', 0);
+	insert into pokemon values
+	(70, 'Weepinbel', 'Flycatcher Pokemon', '1.0','grass', 'poison', 0);
+	insert into pokemon values
+	(71, 'Victreebel', 'Flycatcher Pokemon', '1.7', 'grass', 'poison', 0);
+	insert into pokemon values
+	(72, 'Tentacool', 'Jellyfish Pokemon', '0.9', 'water', 'poison', 0);
+	insert into pokemon values
+	(73, 'Tentacruel', 'Jellyfish Pokemon', '1.6', 'water', 'poison',0);
+	insert into pokemon values
+	(74,'Geodude','Rock Pokemon', '0.3', 'rock', 'ground', 0);
+	insert into pokemon values
+	(75,'Graveler','Rock Pokemon', '0.7', 'rock', 'ground', 0);
+	insert into pokemon values
+	(76, 'Golem', 'Megaton Pokemon', '1.8', 'rock', 'ground', 0);
+	insert into pokemon values
+	(77,'Ponyta', 'Fire Horse Pokemon', '1.4', 'fire', NULL,0);
+	insert into pokemon values
+	(78, 'Rapidash', 'Fire Horse Pokemon', '1.7', 'fire', NULL, 0);
+	insert into pokemon values
+	(79, 'Slowpoke', 'Dopey Pokemon', '1.2', 'water', NULL, 0);
+	insert into pokemon values
+	(80, 'Slowbro', 'Hermit Crab Pokemon', '1.6', 'water', NULL, 0);
+	insert into pokemon values
+	(81, 'Magnemite', 'Magnet Pokemon', '0.3', 'eletric', NULL, 0);
+	insert into pokemon values
+	(82, 'Magneton', 'Magnet Pokemon', '0.5','eletric', NULL, 0);
+	insert into pokemon values
+	(83, "Farfetch'd", 'Wild duck Pokemon', 0.3, 'normal', 'flying', 0);
+	insert into pokemon values
+	(84, 'Doduo', 'Twin Bird Pokemon', 1.4,'normal','flying', 0);
+	insert into pokemon values
+	(85, 'Dodrio', 'Triple Bird Pokemon', 1.8, 'normal', 'flying', 0);
+	insert into pokemon values
+	(86, 'Seel', 'Sea Lion Pokemon', '1.1','water', NULL,0);
+	insert into pokemon values
+	(87, 'Dewgong', 'Sea Lion Pokemon', '1.7', 'water', 'ice', 0);
+	insert into pokemon values
+	(88, 'Grimer', 'Sludge Pokemon', '0.8', 'poison', NULL, 0);
+	insert into pokemon values
+	(89, 'Muk', 'Sludge Pokemon', '1.5', 'poison', NULL, 0);
+	insert into pokemon values
+	(90, 'Shellder', 'Bivalve Pokemon', '0.3', 'water', NULL, 0);
+	insert into pokemon values
+	(91, 'Cloyster', 'Bivalve Pokemon', '1.5', 'water' ,'ice', 0);
+	insert into pokemon values
+	(92, 'Gastly', 'Gas Pokemon', '0.3','ghost', 'poison', 0);
+	insert into pokemon values
+	(93, 'Haunter', 'Gas Pokemon', '1.3', 'ghost', 'poison', 0);
+	insert into pokemon values
+	(94,'Gengar', 'Shadow Pokemon', '1.6', 'ghost', 'poison', 0);
+	insert into pokemon values
+	(95, 'Onix', 'Rock Snake Pokemon', '8.8', 'rock', 'ground', 0);
+	insert into pokemon values
+	(96,'Drowzee', 'Hypnosis Pokemon', 1.0, 'psychic', NULL, 0);
+	insert into pokemon values
+	(97, 'Hypno', 'Hypnosis Pokemon', '1.6', 'psychic',NULL, 0);
+	insert into pokemon values
+	(98, 'Krabby', 'River Crab Pokemon', '0.4', 'water', NULL, 0);
+	insert into pokemon values
+	(99, 'Kingler', 'Pincer Pokemon', '1.7', 'water', NULL, 0);
+	insert into pokemon values
+	(100,'Voltorb','Ball Pokemon', '0.5', 'eletric', NULL, 0);
+	insert into pokemon values
+	(101, 'Electrode', 'Ball Pokemon', '0.8', 'eletric', NULL, 0);
+	insert into pokemon values
+	(102, 'Exeggcute', 'Egg Pokemon', '0.4', 'grass', 'psychic', 0);
+	insert into pokemon values
+	(103, 'Exeggutor', 'Coconut Pokémon', '2.3', 'grass', 'psychic', 0);
+	insert into pokemon values
+	(104, 'Cubone', 'Loleny Pokemon', '0.5', 'ground', null, 0);
+	insert into pokemon values
+	(105, 'Marowak', 'Bone Keeper','1.3', 'ground',NULL,0);
+	insert into pokemon values
+	(106, 'Hitmonlee', 'Kicking Pokemon', '1.5', 'fighting', null, 0);
+	insert into pokemon values
+	(107, 'Hitmonchan', 'Punching Pokemon', '1.8', 'fighting', null, 0);
+	insert into pokemon values
+	(108, 'Licktung', 'Licking Pokemon', '1.45', 'normal', null, 0);
+	insert into pokemon values
+	(109, 'Koffing', 'Poison Gas Pokemon', '0.8', 'poison', null, 0);
+	insert into pokemon values
+	(110, 'Weezing', 'Poison Gas Pokemon', '0.4', 'poison', null, 0);
+	insert into pokemon values
+	(111, 'Rhyhorn', 'Spikes Pokemon', '1.3', 'ground', 'rock', 0);
+	insert into pokemon values
+	(112, 'Rhydon', 'Drill Pokemon', '1.73', 'ground', 'rock', 0);
+	insert into pokemon values
+	(113, 'Chansey', 'Egg Pokemon', '0.8', 'normal', null, 0);
+	insert into pokemon values
+	(114, 'Tangela', 'Vine Pokemon', '1.0', 'grass', null, 0);
+	insert into pokemon values
+	(115, 'Kengaskhan', 'Parent Pokemon', '2.2', 'normal', null, 0);
+	insert into pokemon values
+	(116, 'Horsea','Dragon Pokemon', '0.4', 'water', null, 0);
+	insert into pokemon values
+	(117, 'Seadra', 'Dragon Pokemon', '1.2', 'water', null, 0);
+	insert into pokemon values
+	(118, 'Goldeen','Goldfish Pokemon', '0.4', 'water', null, 0);
+	insert into pokemon values
+	(119, 'Seaking','Goldfish Pokemon', '0.4', 'water', null, 0);
+	insert into pokemon values
+	(120, 'Staryu', 'Starshape Pokemon', '0.8', 'water', null, 0);
+	insert into pokemon values
+	(121, 'Starmie', 'Mysterious Pokemon', '0.8', 'water', 'psychic', 0);
+	insert into pokemon values
+	(122, 'Mr. Mime', 'Barrier Pokemon', '1.2', 'psychic', null, 0);
+	insert into pokemon values
+	(123, 'Scyther', 'Mantis Pokemon', '1.5', 'bug', 'flying', 0);
+	insert into pokemon values
+	(124, 'Jynx', 'Humanshape Pokemon', '1.4', 'ice', 'psychic', 0);
+	insert into pokemon values
+	(125, 'Electabuzz' , 'Eletric Pokemon', '1.2', 'eletric', null, 0);
+	insert into pokemon values
+	(126, 'Magmar', 'Spitfire Pokémon', '1.2', 'fire', null, 0);
+	insert into pokemon values
+	(127, 'Pinsir', 'Stagbeetle Pokemon', '1.8', 'bug', null, 0);
+	insert into pokemon values
+	(128, 'Taurus', 'Wild Bull Pokemon', '1.8', 'normal', null, 0);
+	insert into pokemon values
+	(129, 'Magikarp', 'Fish Pokemon', '0.6', 'water', null, 0);
+	insert into pokemon values
+	(130, 'Gyarados', 'Atrocious Pokemon', '6.5', 'water', 'flying', 0);
+	insert into pokemon values
+	(131,'Lapas', 'Transport Pokemon','2.5', 'ice', 'water', 0);
+	insert into pokemon values
+	(132, 'Ditto', 'Transform Pokemon', '0.4', 'normal', null,0);
+	insert into pokemon values
+	(133, 'Eevee', 'Evolution Pokemon', '0.4', 'normal', null, 0);
+	insert into pokemon values
+	(134, 'Vaporeon', 'Bubble Jet Pokemon', '1.0', 'water', null,0);
+	insert into pokemon values
+	(135, 'Jolteon', 'Lightning Pokemon', '0.8', 'eletric', null, 0);
+	insert into pokemon values
+	(136, 'Flareon', 'Flame Pokemon', '0.9', 'fire', null, 0);
+	insert into pokemon values
+	(137, 'Porygon', 'Virtual Pokemon', '0.9', 'normal', null, 0);
+	insert into pokemon values
+	(138, 'Omanyte', 'Spiral Pokemon', '0.7', 'rock', 'rock', 0);
+	insert into pokemon values
+	(139, 'Omastar', 'Spiral Pokemon', '1.0', 'rock', 'rock', 0);
+	insert into pokemon values
+	(140, 'Kabuto', 'Shellfish Pokemon', '0.5', 'rock', 'water', 0);
+	insert into pokemon values
+	(141, 'Kabutops', 'Shellfish Pokemon','1.7', 'rock', 'water', 0);
+	insert into pokemon values
+	(142, 'Aerodactyl', 'Fossil Pokemon', '2.37', 'rock', 'flying', 0);
+	insert into pokemon values
+	(143, 'Snorlax', 'Sleeping Pokemon', '2.1', 'normal', null, 0);
+	insert into pokemon values
+	(144, 'Articuno', 'Freeze Pokemon', '1.7', 'ice', 'flying', 1);
+	insert into pokemon values
+	(145, 'Zapdos', 'Eletric Pokemon', '1.6', 'eletric', 'flying', 1);
+	insert into pokemon values
+	(146,'Moltres', 'Flame Pokemon', '1.6', 'eletric', 'flying', 1);
+	insert into pokemon values
+	(147, 'Dratini', 'Dragon Pokemon', '1.8', 'dragon', null, 0);
+	insert into pokemon values
+	(148, 'Dragonair', 'Dragon Pokemon', '4.0','dragon', null, 0);
+	insert into pokemon values
+	(149, 'Dragonite', 'Dragon Pokemon', '2.2', 'dragon', 'flying', 0);
+	insert into pokemon values
+	(150, 'Mewtwo', 'Genetic Pokemon', '2.0', 'psychic', null,0);
+	insert into pokemon values
+	(151, 'Mew', 'Genetic Pokemon', '2.0', 'psychic', null,0);
