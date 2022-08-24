@@ -40,6 +40,8 @@ then
 	result=$((number_a*number_b))
 	echo "The product of $number_a and $number_b it's: $result"
 
+#this coment is to test my pipeline
+
 # setting division
 elif [ $choice = "d" ]; 
 then
