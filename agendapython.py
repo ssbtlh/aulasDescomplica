@@ -1,5 +1,7 @@
 #!/bin/python3
 
+# este comentário visa testar a pipeline
+
 import mysql.connector
 
 # Declaração de funções para manipulação por menu
